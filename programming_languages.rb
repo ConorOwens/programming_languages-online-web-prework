@@ -6,15 +6,16 @@ def reformat_languages(languages)
    # binding.pry
     hash.each do |language, hash2|
       #binding.pry
-      if new_hash[language].nil?
+      if new_hash[language]
       #binding.pry
-      if new_hash[language][:style]
-        new_hash[language][:style] << style
+        if new_hash[language][:style]
+          new_hash[language][:style] << style
         #binding.pry
-        new_hash[language][:style] = [style]
-      else
-        binding.pry
-        new_hash[language][:style] << style
+        else
+        #binding.pry
+          new_hash[language][:style] = [style]
+        end
+      else new_hash[language]
       end
     end
   end
