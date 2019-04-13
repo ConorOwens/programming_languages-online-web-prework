@@ -8,8 +8,11 @@ def reformat_languages(languages)
       #binding.pry
       new_hash[language] = hash2
       #binding.pry
-      new_hash[language][:style] = []
-      new_hash[language][:style] << style
+      if new_hash[language][:style] == nil
+        new_hash[language][:style] = []
+      else
+        new_hash[language][:style] << style
+      end
     end
   end
   new_hash
