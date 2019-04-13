@@ -9,9 +9,10 @@ def reformat_languages(languages)
       new_hash[language] = hash2
       #binding.pry
       if new_hash[language][:style] == nil
-        binding.pry
+        #binding.pry
         new_hash[language][:style] = [style]
       else
+        binding.pry
         new_hash[language][:style] << style
       end
     end
