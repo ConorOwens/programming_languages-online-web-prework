@@ -7,6 +7,7 @@ def reformat_languages(languages)
     hash.each do |language, hash2|
       #binding.pry
       new_hash[language] = hash2
+      binding.pry
       new_hash[language][:style] << style
     end
   end
